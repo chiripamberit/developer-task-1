@@ -39,7 +39,7 @@ public class SubscriberRequest {
     @Version
     private long version;
 
-    @PreInsert
+    @PrePersist
     protected void init() {
         if(id == null) {
             id = KeyGen.getUniqueId();
@@ -47,6 +47,7 @@ public class SubscriberRequest {
         dateCreated = new Date();
 
         if(status == null) {
+
             status = SystemConstants.STATUS_NEW;
         }
 
