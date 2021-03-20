@@ -31,6 +31,7 @@ public class MessageConvertersTest {
 
     @Before
     public void setUp() {
+        
 
         partnerCode = "001";
         msisdn = "0773415717";
